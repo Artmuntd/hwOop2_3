@@ -8,7 +8,13 @@ public class Animals {
         setName(name);
         setAge(age);
     }
-
+    public  void  eat(){};
+    public  void  go(){};
+    public  void  sleep(){};
+    @Override
+    public String toString() {
+        return "Название животного: " + name + ". Возраст животного: " + age+ " Лет.";
+    }
     public String getName() {
         return name;
     }
@@ -31,12 +37,7 @@ public class Animals {
         }
     }
 
-    public  void  eat(){};
-    public  void  go(){};
-    public  void  sleep(){};
 
-    @Override
-    public String toString() {
-        return "Название животного: " + name + ". Возраст животного: " + age+ " Лет.";
-    }
+
+
 }

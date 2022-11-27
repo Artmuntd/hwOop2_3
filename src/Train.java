@@ -58,6 +58,16 @@ public class Train  extends  Transport{
         this.numberOfWagons = numberOfWagons;
     }
 
+    public static  void allInfTrain(Train train){
+        System.out.println(
+                "Марка: " +   train.getBrand() + " " + "Модель: " + train.getModel() + " " +
+                        " " +" Страна производитель: " +  train.getProductionCountry() + " " + "Год выпуска: " + train.getProductionYear() +
+                        " " + "Максимальная скорость: " +  train.getMaxSpeed()+ "км/ч " +" Отходит от "+  train.getNameStationStart()+ " " + " Идет до: "+ train.getNameStatoinFinal()+
+                        " "+ "цена : "+ train.getCost() + "  рублей"
+                        +", Количество вагонов : " +  train.getNumberOfWagons()+ ", " +   " Время в пути в часах: " + train.getTimeTrip() + " " + train.refill()
+        );
+    }
+
     @Override
   String refill() {
    return      "Ездиет на дизеле";

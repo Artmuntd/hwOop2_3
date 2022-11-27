@@ -34,9 +34,19 @@ public class Mammals extends  Animals{
     public  void walk(){};
 
     @Override
+    public void eat() {
+        super.eat();
+    }
+
+    @Override
+    public void go() {
+        super.go();
+    }
+
+    @Override
     public String toString() {
         return  "Среда обитания: " + habitat + '\'' +
                 ", Скорость передвижения: " + movementSpeed + ". " +
-               super.toString();
+                super.toString();
     }
 }

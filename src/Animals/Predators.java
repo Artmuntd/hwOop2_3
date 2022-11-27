@@ -21,6 +21,23 @@ public class Predators  extends  Mammals{
     }
 
     @Override
+    public void eat() {
+        super.eat();
+    }
+
+    @Override
+    public void go() {
+        super.go();
+    }
+
+    public  void  hunt(){};
+    @Override
+    public String toString() {
+        return "Тип пищи: " + typeOfEat  + ". " +
+                super.toString();
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -33,11 +50,7 @@ public class Predators  extends  Mammals{
         return Objects.hash(typeOfEat);
     }
 
-    @Override
-    public String toString() {
-        return "Тип пищи: " + typeOfEat  + ". " +
-                super.toString();
-    }
 
-    public  void  hunt(){};
+
+
 }

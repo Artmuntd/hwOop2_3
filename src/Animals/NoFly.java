@@ -19,7 +19,32 @@ public class NoFly extends  Birds{
             this.movementType = movementType;
         }
     }
-    public  void  fly(){};
+
+    @Override
+    public void eat() {
+        super.eat();
+    }
+
+    @Override
+    public void go() {
+        super.go();
+    }
+
+    public  void  walk(){};
+
+    @Override
+    public void hunt() {
+        super.hunt();
+    }
+
+
+
+    @Override
+    public String toString() {
+        return
+                "Летает или нет: " + movementType + ". "+
+                        super.toString();
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -35,11 +60,6 @@ public class NoFly extends  Birds{
         return Objects.hash(super.hashCode(), movementType);
     }
 
-    @Override
-    public String toString() {
-        return
-                "Летает или нет: " + movementType + ". "+
-                        super.toString();
-    }
+
 }
 

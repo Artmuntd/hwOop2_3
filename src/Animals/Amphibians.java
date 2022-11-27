@@ -18,7 +18,23 @@ public class Amphibians  extends  Animals{
             this.habitat = habitat;
         }
     }
+    public  void  hunt(){};
 
+    @Override
+    public void eat() {
+        super.eat();
+    }
+
+    @Override
+    public void go() {
+        super.go();
+    }
+
+    @Override
+    public String toString() {
+        return  "Среда обитания: " + habitat  + ". " +
+
+                super.toString(); }
     @Override
     public boolean equals(Object o) {
         if (getName() == o) return true;
@@ -32,12 +48,7 @@ public class Amphibians  extends  Animals{
         return Objects.hash(habitat);
     }
 
-    @Override
-    public String toString() {
-        return  "Среда обитания: " + habitat  + ". " +
 
-                super.toString();
-    }
 
-    public  void  hunt(){};
+
 }

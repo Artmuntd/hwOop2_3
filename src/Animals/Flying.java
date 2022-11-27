@@ -23,6 +23,27 @@ public class Flying  extends  Birds{
     public  void  fly(){};
 
     @Override
+    public void eat() {
+        super.eat();
+    }
+
+    @Override
+    public void go() {
+        super.go();
+    }
+
+    @Override
+    public void hunt() {
+        super.hunt();
+    }
+
+    @Override
+    public String toString() {
+        return
+                "Летает или нет" + movementType + ". "+
+                        super.toString();
+    }
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -36,10 +57,5 @@ public class Flying  extends  Birds{
         return Objects.hash(super.hashCode(), movementType);
     }
 
-    @Override
-    public String toString() {
-        return
-                "Летает или нет" + movementType + ". "+
-             super.toString();
-    }
+
 }

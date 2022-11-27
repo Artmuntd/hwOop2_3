@@ -22,6 +22,22 @@ public class Herbivores  extends Mammals{
     public  void  graze(){};
 
     @Override
+    public void eat() {
+        super.eat();
+    }
+
+    @Override
+    public void go() {
+        super.go();
+    }
+
+    @Override
+    public String toString() {
+        return "Тип пищи: " + typeOfEat  + ". " +
+                super.toString();
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -34,9 +50,5 @@ public class Herbivores  extends Mammals{
         return Objects.hash(typeOfEat);
     }
 
-    @Override
-    public String toString() {
-        return "Тип пищи: " + typeOfEat  + ". " +
-                 super.toString();
-    }
+
 }

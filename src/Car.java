@@ -254,5 +254,17 @@ public class Car extends Transport {
         }
     }
 
+    public static  void allInfCar(Car car){
+        System.out.println(
+                "Марка: " +   car.getBrand() + " " + "Модель: " + car.getModel() + " " + "цвет: " +  car.getColor() +
+                        " " +" Страна производитель: " +  car.getProductionCountry() + " " + "Год выпуска: " + car.getProductionYear() +
+                        " " + "Двигатель: " +  car.getEngineVolume()+ " " +" Мест: "+  car.getSeatsCount()+ " " + " Регистранционный номер: "+ car.getRegNumber() +
+                        " "+ "Тип кузова: "+ car.getTypeBody() + " "
+                        +"КП: " +  car.getGears()+ ", " +  " Макс скорость: " + car.getMaxSpeed() +  " " + (car.isSummerTypes()? "летняя" : "зимняя ") +  " резина" + " "
+                        + (car.getKey().isWithoutKeyAccess()? " безключевой" : "ключевой") +  " "
+                        + (car.getKey().isRemoteRunEng()? "удаленный " : " не удаленный") + " "
+                        + car.getInsurance().getExpireDate() + " " + car.getInsurance().getNumber() + " " + " Срок страховки "+ car.getInsurance().getCost() + " " + car.refill()
+        );
+    }
 }
 

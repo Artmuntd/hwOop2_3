@@ -18,6 +18,25 @@ public class Birds extends Animals {
             this.habitat = habitat;
         }
     }
+    public  void  hunt(){};
+
+    @Override
+    public void eat() {
+        super.eat();
+    }
+
+    @Override
+    public void go() {
+        super.go();
+    }
+
+    @Override
+    public String toString() {
+        return  "Среда обитания: " + habitat  + ". " +
+
+                super.toString();
+    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -32,12 +51,6 @@ public class Birds extends Animals {
         return Objects.hash(habitat);
     }
 
-    @Override
-    public String toString() {
-        return  "Среда обитания: " + habitat  + ". " +
 
-                super.toString();
-    }
 
-    public  void  hunt(){};
 }

@@ -37,7 +37,7 @@ public abstract class Transport {
              }
        }
 
-
+       abstract String refill();
 
        public String getBrand() {
               return brand;
@@ -79,5 +79,5 @@ public abstract class Transport {
               this.maxSpeed = maxSpeed;
        }
 
-       abstract String refill();
+
 }
