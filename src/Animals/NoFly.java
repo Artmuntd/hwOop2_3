@@ -30,7 +30,9 @@ public class NoFly extends  Birds{
         super.go();
     }
 
-    public  void  walk(){};
+    public  void  walk(){
+        System.out.println("Я не умею летать");
+    };
 
     @Override
     public void hunt() {

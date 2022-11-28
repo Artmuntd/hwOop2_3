@@ -18,7 +18,9 @@ public class Birds extends Animals {
             this.habitat = habitat;
         }
     }
-    public  void  hunt(){};
+    public  void  hunt(){
+        System.out.println("Я умею охотиться");
+    };
 
     @Override
     public void eat() {

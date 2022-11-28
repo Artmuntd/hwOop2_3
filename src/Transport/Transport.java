@@ -1,3 +1,5 @@
+package Transport;
+
 public abstract class Transport {
        private final String brand;
        private final String model;

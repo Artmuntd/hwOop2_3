@@ -19,7 +19,9 @@ public class Herbivores  extends Mammals{
             this.typeOfEat = typeOfEat;
         }
     }
-    public  void  graze(){};
+    public  void  graze(){
+        System.out.println("Я питаюсь на пастбище");
+    };
 
     @Override
     public void eat() {

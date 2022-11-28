@@ -20,7 +20,9 @@ public class Flying  extends  Birds{
             this.movementType = movementType;
         }
     }
-    public  void  fly(){};
+    public  void  fly(){
+        System.out.println("Я умею летать");
+    };
 
     @Override
     public void eat() {
