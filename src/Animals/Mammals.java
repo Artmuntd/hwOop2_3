@@ -31,7 +31,9 @@ public class Mammals extends  Animals{
             this.movementSpeed = Math.abs(movementSpeed);
         }
     }
-    public  void walk(){};
+    public  void walk(){
+        System.out.println("Я гуляю");
+    };
 
     @Override
     public void eat() {

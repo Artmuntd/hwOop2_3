@@ -30,7 +30,9 @@ public class Predators  extends  Mammals{
         super.go();
     }
 
-    public  void  hunt(){};
+    public  void  hunt(){
+        System.out.println("Я охочусь");
+    };
     @Override
     public String toString() {
         return "Тип пищи: " + typeOfEat  + ". " +
