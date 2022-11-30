@@ -3,13 +3,11 @@ package Transport;
 public abstract class Transport {
        private final String brand;
        private final String model;
-       private int maxSpeed;
-       private   String color;
-       private int  productionYear;
-       private final String productionCountry;
+
+       private  double engineVolume;
 
 
-       public Transport(String brand, String model, String color, int productionYear, String productionCountry, int maxSpeed) {
+       public Transport(String brand, String model, double engineVolume) {
               if (brand == "") {
                      this.brand = "default";
               } else {
@@ -19,27 +17,13 @@ public abstract class Transport {
                      this.model = "default";
               } else {
                      this.model = model;
-                setColor(color);
-              }
-              if (productionYear == 0  ) {
-                     this.productionYear = 2000;
-              } else {
-                     this.productionYear= productionYear;
-              }
 
-              if (productionCountry == "") {
-                     this.productionCountry = "default";
-              } else {
-                     this.productionCountry = productionCountry;
               }
-             if(maxSpeed <=0) {
-                    this.maxSpeed = 160;
-             } else  {
-                    this.maxSpeed = maxSpeed;
-             }
+              this.engineVolume=engineVolume;
+
        }
 
-       abstract String refill();
+
 
        public String getBrand() {
               return brand;
@@ -52,34 +36,6 @@ public abstract class Transport {
        }
 
 
-
-       public String getColor() {
-              return color;
-       }
-       public void setColor(String color) {
-
-              if (color == "" && color == null) {
-                     this.color = "белый";
-              } else {
-                     this.color = color;
-              }
-       }
-       public int getProductionYear() {
-              return productionYear;
-       }
-
-       public String getProductionCountry() {
-              return productionCountry;
-       }
-
-       public int getMaxSpeed() {
-              return this.maxSpeed;
-       }
-
-       public void setMaxSpeed(int maxSpeed) {
-
-              this.maxSpeed = maxSpeed;
-       }
 
 
 }
