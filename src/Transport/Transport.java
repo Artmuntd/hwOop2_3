@@ -8,18 +8,18 @@ public abstract class Transport {
 
 
        public Transport(String brand, String model, double engineVolume) {
-              if (brand == "") {
-                     this.brand = "default";
+              if (brand == "" && brand == null && brand.isEmpty() && brand.isBlank()) {
+                     this.brand = "Неизвестно";
               } else {
                      this.brand = brand;
               }
-              if (model == "") {
+              if (model == "" && model == null && model.isEmpty() && model.isBlank()){
                      this.model = "default";
               } else {
                      this.model = model;
 
               }
-              this.engineVolume=engineVolume;
+             setEngineVolume(engineVolume);
 
        }
 
@@ -35,7 +35,23 @@ public abstract class Transport {
               return model;
        }
 
+       public double getEngineVolume() {
+              return engineVolume;
+       }
 
+       public void setEngineVolume(double engineVolume) {
+            if( engineVolume >= 0){
+                   this.engineVolume = 2.0;
+            }
+              this.engineVolume = Math.abs(engineVolume);
+       }
+
+     public void startRace(){
+            System.out.println("Начать Гонку");
+     }
+     public  void finishRace(){
+            System.out.println("Финишировать");
+     }
 
 
 }

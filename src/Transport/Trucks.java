@@ -1,20 +1,21 @@
 package Transport;
 
-public class Bus  extends Transport implements  Competing{
-      private  String categoryD;
+public class Trucks extends  Transport implements Competing{
+    private String categoryC;
     public static final String PS = "заезжаю на Пит-Стоп";
     public static final String BS = "Ставлю лучший круг";
     public static final  String MS = "Достигаю максимальную скорость";
-    public Bus(String brand, String model, double engineVolume) {
+
+    public Trucks(String brand, String model, double engineVolume) {
         super(brand, model, engineVolume);
     }
 
-    public String getCategoryD() {
-        return categoryD;
+    public String getCategoryC() {
+        return categoryC;
     }
 
-    public void setCategoryD(String categoryD) {
-        this.categoryD = categoryD;
+    public void setCategoryC(String categoryC) {
+        this.categoryC = categoryC;
     }
 
     @Override
@@ -26,7 +27,6 @@ public class Bus  extends Transport implements  Competing{
     public void finishRace() {
         super.finishRace();
     }
-
 
     @Override
     public String pitStop() {
@@ -47,11 +47,11 @@ public class Bus  extends Transport implements  Competing{
     public void doInf(String inf) {
         switch (inf) {
             case PS:
-                System.out.println( getBrand() + " "+ getModel()+ " " + "заезжаю на пит стоп на 15 секунд");
+                System.out.println( getBrand() + " "+ getModel()+ " " + "заезжаю на пит стоп на 35 секунд");;
                 break;
 
             case MS:
-                System.out.println(getBrand()+ " "+ getModel()+ " " + "Достигаю Максимальной скорости 110");
+                System.out.println(getBrand()+ " "+ getModel()+ " " + "Достигаю Максимальной скорости 140");
                 break;
 
             case BS:
@@ -63,3 +63,4 @@ public class Bus  extends Transport implements  Competing{
 
     }
 }
+
