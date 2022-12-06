@@ -1,7 +1,6 @@
 package Transport;
 
 public class Driver <C extends Car &  Competing>{
-
         private String fullname;
         private boolean driverLicense;
         private int experience;
