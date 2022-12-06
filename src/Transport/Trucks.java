@@ -50,6 +50,11 @@ public class Trucks extends  Transport implements Competing{
     }
 
     @Override
+    public boolean service() {
+        return Math.random() > 0.7;
+    }
+
+    @Override
     public String pitStop() {
         return PS;
     }

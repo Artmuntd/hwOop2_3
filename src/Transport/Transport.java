@@ -53,5 +53,6 @@ public abstract class Transport {
             System.out.println("Финишировать");
      }
  public  abstract  void printType();
+       public abstract boolean service();
 
 }
