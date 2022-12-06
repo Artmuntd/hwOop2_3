@@ -52,6 +52,6 @@ public abstract class Transport {
      public  void finishRace(){
             System.out.println("Финишировать");
      }
-
+ public  abstract  void printType();
 
 }

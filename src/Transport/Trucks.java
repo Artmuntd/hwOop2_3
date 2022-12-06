@@ -1,13 +1,23 @@
 package Transport;
 
 public class Trucks extends  Transport implements Competing{
-    private String categoryC;
+    private Weight weight;
+   private String categoryC;
     public static final String PS = "заезжаю на Пит-Стоп";
     public static final String BS = "Ставлю лучший круг";
     public static final  String MS = "Достигаю максимальную скорость";
 
-    public Trucks(String brand, String model, double engineVolume) {
+    public Trucks(String brand, String model, double engineVolume, Weight weight) {
         super(brand, model, engineVolume);
+        this.weight = weight;
+    }
+
+    public Weight getWeight() {
+        return weight;
+    }
+
+    public void setWeight(Weight weight) {
+        this.weight = weight;
     }
 
     public String getCategoryC() {
@@ -26,6 +36,17 @@ public class Trucks extends  Transport implements Competing{
     @Override
     public void finishRace() {
         super.finishRace();
+    }
+
+    @Override
+    public void printType() {
+        if( weight == null){
+            System.out.println("Данных по авто не достаточно");
+        } else  {
+            String from =  weight.getFrom()==null?"":"от " + weight.getFrom();
+            String to =  weight.getTo()==null?"":"до " + weight.getTo();
+            System.out.println("Тип Авто: от " + from + " до: " + to);
+        }
     }
 
     @Override

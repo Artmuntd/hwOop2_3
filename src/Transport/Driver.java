@@ -7,6 +7,7 @@ public class Driver <C extends Car &  Competing>{
         private int experience;
 
         public Driver(String fullname, boolean driverLicense, int experience) {
+
             setFullname(fullname);
             this.driverLicense = driverLicense;
             this.experience = experience;
