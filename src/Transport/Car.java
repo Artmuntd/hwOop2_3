@@ -40,16 +40,17 @@ public class Car extends Transport implements Competing  {
 
     @Override
     public void printType() {
-        if( typeOfBody == null){
-            System.out.println("Данных по авто не достаточно");
-        } else  {
-            System.out.println("Тип Авто: " + typeOfBody);
-        }
+        System.out.println(" Машина " + getBrand() + " " + getModel() + " Починена");
     }
 
     @Override
     public boolean service() {
         return Math.random() > 0.5;
+    }
+
+    @Override
+    public void repair() {
+
     }
 
     @Override
