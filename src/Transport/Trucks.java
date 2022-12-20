@@ -1,30 +1,31 @@
 package Transport;
 
-public class Bus  extends Transport implements  Competing{
-     private Capacity capacity;
-      private  String categoryD;
+public class Trucks extends  Transport implements Competing{
+    private Weight weight;
+   private String categoryC;
     public static final String PS = "заезжаю на Пит-Стоп";
     public static final String BS = "Ставлю лучший круг";
     public static final  String MS = "Достигаю максимальную скорость";
-    public Bus(String brand, String model, double engineVolume ,Capacity capacity) {
+
+    public Trucks(String brand, String model, double engineVolume, Weight weight) {
         super(brand, model, engineVolume);
-        this.capacity = capacity;
+        this.weight = weight;
     }
 
-    public Capacity getCapacity() {
-        return capacity;
+    public Weight getWeight() {
+        return weight;
     }
 
-    public void setCapacity(Capacity capacity) {
-        this.capacity = capacity;
+    public void setWeight(Weight weight) {
+        this.weight = weight;
     }
 
-    public String getCategoryD() {
-        return categoryD;
+    public String getCategoryC() {
+        return categoryC;
     }
 
-    public void setCategoryD(String categoryD) {
-        this.categoryD = categoryD;
+    public void setCategoryC(String categoryC) {
+        this.categoryC = categoryC;
     }
 
     @Override
@@ -39,24 +40,24 @@ public class Bus  extends Transport implements  Competing{
 
     @Override
     public void printType() {
-        if( capacity == null){
+        if( weight == null){
             System.out.println("Данных по авто не достаточно");
         } else  {
-            System.out.println("Тип Авто: " + capacity);
+            String from =  weight.getFrom()==null?"":"от " + weight.getFrom();
+            String to =  weight.getTo()==null?"":"до " + weight.getTo();
+            System.out.println("Тип Авто: от " + from + " до: " + to);
         }
     }
 
     @Override
     public boolean service() {
-        System.out.println("Автобус " + getBrand() + " Диагностика не требуется");
-        return true;
+        return Math.random() > 0.7;
     }
 
     @Override
     public void repair() {
-        System.out.println("Автобус " + getBrand() + " " + getModel() + " Починен");
+        System.out.println("Грузовик " + getBrand() + " " + getModel() + " Починен");
     }
-
 
     @Override
     public String pitStop() {
@@ -77,11 +78,11 @@ public class Bus  extends Transport implements  Competing{
     public void doInf(String inf) {
         switch (inf) {
             case PS:
-                System.out.println( getBrand() + " "+ getModel()+ " " + "заезжаю на пит стоп на 15 секунд");
+                System.out.println( getBrand() + " "+ getModel()+ " " + "заезжаю на пит стоп на 35 секунд");;
                 break;
 
             case MS:
-                System.out.println(getBrand()+ " "+ getModel()+ " " + "Достигаю Максимальной скорости 110");
+                System.out.println(getBrand()+ " "+ getModel()+ " " + "Достигаю Максимальной скорости 140");
                 break;
 
             case BS:
@@ -93,3 +94,4 @@ public class Bus  extends Transport implements  Competing{
 
     }
 }
+
